@@ -2,14 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Noisy boy Installer</title>
+    <title>NWSKJAM Installer | Nwask</title>
     <meta
       name="description"
-      content="Easily allow users to install Noisy boy jammer."
+      content="Permita que os usuários instalem facilmente o jammer NWSKJAM."
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="color-scheme" content="dark light" />
-    
     
     <style>
       body {
@@ -33,10 +32,10 @@
       a {
         color: #03a9f4;
       }
-      .invisible {
+      .invisivel {
         visibility: hidden;
       }
-      .hidden {
+      .escondido {
         display: none;
       }
       esp-web-install-button[install-unsupported] {
@@ -46,13 +45,13 @@
         max-width: 100%;
         overflow-y: scroll;
       }
-      .footer {
+      .rodape {
         margin-top: 24px;
         border-top: 1px solid #ccc;
         padding-top: 24px;
         text-align: center;
       }
-      .footer .initiative {
+      .rodape .iniciativa {
         font-style: italic;
         margin-top: 16px;
       }
@@ -81,50 +80,43 @@
   </head>
   <body>
     <div class="content">
-      <h1>Noisy Boy Flasher</h1>
-      <p>Choose your hardware</p>
+      <h1>NWSKJAM Flasher</h1>
+      <p>Escolha seu hardware</p>
       <ul class="radios">
         <li>
-          <label><input type="radio" name="type" value="Ble1" />WIFI:NOISYBOY PASSWORD: madapaka |BOOT BUTTON|Single or dual Nrf24l01 Official realease</label>
+          <label><input type="radio" name="type" value="Ble1" />WIFI:NOISYBOY SENHA: madapaka |BOTÃO BOOT|Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
 	       <li>
-          <label><input type="radio" name="type" value="Ble2" />WIFI:UNKNOWN PASSWORD:madapaka |GPIO4 BUTTON| Single or dual Nrf24l01 Official realease</label>
+          <label><input type="radio" name="type" value="Ble2" />WIFI:DESCONHECIDO SENHA:madapaka |BOTÃO GPIO4| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
 	         <li>
-          <label><input type="radio" name="type" value="Ble5" />WIFI:UNKNOWN PASSWORD:madapaka |BOOT BUTTON| Single or dual Nrf24l01 Official realease</label>
+          <label><input type="radio" name="type" value="Ble5" />WIFI:DESCONHECIDO SENHA:madapaka |BOTÃO BOOT| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
-	      
 	             <li>
-          <label><input type="radio" name="type" value="Ble3" /> dual  x whitenoise For test only</label>
+          <label><input type="radio" name="type" value="Ble3" />Dual x white noise Apenas para testes</label>
         </li>
           <li>
-          <label><input type="radio" name="type" value="Ble4" /> WIFI:NOISYBOY PASSWORD: madapaka |GPIO 4|Single or dual Nrf24l01 Official realease </label>
+          <label><input type="radio" name="type" value="Ble4" /> WIFI:NOISYBOY SENHA: madapaka |GPIO 4|Single ou dual Nrf24l01 Lançamento oficial </label>
         </li>
 	        <li>
-          <label><input type="radio" name="type" value="Ble6" /> WIFI:NOISYBOY PASSWORD: madapaka FOR DIY PCB </label>
+          <label><input type="radio" name="type" value="Ble6" /> WIFI:NOISYBOY SENHA: madapaka PARA PCB DIY </label>
         </li>
- 
- 
       </ul>
       <p class="button-row" align="center">
-        <esp-web-install-button class="invisible"></esp-web-install-button>
+        <esp-web-install-button class="invisivel"></esp-web-install-button>
       </p>
 
-      <div class="footer">
-	  ✨ <a href="hhttps://github.com/smoochiee/Noisy-boy-esp32-Bluetooth-jammer/blob/main/GCash-MyQR-16032024181536.PNG.jpg"
-          >Gcash</a
-        > 
+      <div class="rodape">
+	  ✨ 
 		
-  
-       You can donate <a href="https://paypal.me/smoochieelee?country.x=PH&locale.x=en_US">Paypal</a> 🛠️
+       Você pode doar via <a href="http://pixgg.com/nwask">PixGG</a> 🛠️
     </div>
     <script>
-	
       document.querySelectorAll('input[name="type"]').forEach(radio =>
         radio.addEventListener("change", () => {
           const button = document.querySelector('esp-web-install-button');
           button.manifest = `web/manifest_${radio.value}.json`;
-          button.classList.remove('invisible');
+          button.classList.remove('invisivel');
         }
       ));
     </script>
