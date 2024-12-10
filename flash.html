@@ -7,74 +7,116 @@
       name="description"
       content="Permita que os usuários instalem facilmente o jammer NWSKJAM."
     />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
-    
     <style>
+      
       body {
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Ubuntu, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding: 0;
         margin: 0;
-        line-height: 1.4;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
       }
       .content {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 12px;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-      h2 {
-        margin-top: 2em;
+      h1 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 2rem;
       }
-      h3 {
-        margin-top: 1.5em;
+      p {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #ffffff;
+      }
+      .radios {
+        margin: 20px 0;
+        padding: 0;
+      }
+      .radios li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 10px;
+        background: #000000;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .radios li:hover {
+        background: #e0f7fa;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
       }
       a {
-        color: #03a9f4;
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #0056b3;
+      }
+      .button-row {
+        text-align: center;
+        margin-top: 20px;
+      }
+      esp-web-install-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      esp-web-install-button:hover {
+        background-color: #0056b3;
       }
       .invisivel {
         visibility: hidden;
       }
-      .escondido {
-        display: none;
-      }
-      esp-web-install-button[install-unsupported] {
-        visibility: inherit;
-      }
-      .content pre {
-        max-width: 100%;
-        overflow-y: scroll;
-      }
       .rodape {
-        margin-top: 24px;
-        border-top: 1px solid #ccc;
-        padding-top: 24px;
+        margin-top: 40px;
         text-align: center;
+        font-size: 0.9rem;
+        color: #555;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
       }
-      .rodape .iniciativa {
-        font-style: italic;
-        margin-top: 16px;
+      .rodape a {
+        color: #007bff;
+        text-decoration: none;
       }
-      table {
-        border-spacing: 0;
-      }
-      td {
-        padding: 8px;
-        border-bottom: 1px solid #ccc;
-      }
-      .radios li {
-        list-style: none;
-        line-height: 2em;
+      .rodape a:hover {
+        text-decoration: underline;
       }
       @media (prefers-color-scheme: dark) {
         body {
-          background-color: #333;
-          color: #fff;
+          background-color: #121212;
+          color: #e0e0e0;
+        }
+        .content {
+          background: #1e1e1e;
+          color: #e0e0e0;
         }
         a {
           color: #58a6ff;
         }
+        .rodape {
+          border-top-color: #333;
+        }
       }
+    
     </style>
     <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
   </head>
@@ -84,32 +126,30 @@
       <p>Escolha seu hardware</p>
       <ul class="radios">
         <li>
-          <label><input type="radio" name="type" value="Ble1" />WIFI:NOISYBOY SENHA: madapaka |BOTÃO BOOT|Single ou dual Nrf24l01 Lançamento oficial</label>
+          <label><input type="radio" name="type" value="Ble1" />WIFI:NOISYBOY SENHA: madapaka |BOTÃO BOOT| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
-	       <li>
-          <label><input type="radio" name="type" value="Ble2" />WIFI:DESCONHECIDO SENHA:madapaka |BOTÃO GPIO4| Single ou dual Nrf24l01 Lançamento oficial</label>
+        <li>
+          <label><input type="radio" name="type" value="Ble2" />WIFI:DESCONHECIDO SENHA: madapaka |BOTÃO GPIO4| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
-	         <li>
-          <label><input type="radio" name="type" value="Ble5" />WIFI:DESCONHECIDO SENHA:madapaka |BOTÃO BOOT| Single ou dual Nrf24l01 Lançamento oficial</label>
+        <li>
+          <label><input type="radio" name="type" value="Ble5" />WIFI:DESCONHECIDO SENHA: madapaka |BOTÃO BOOT| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
-	             <li>
+        <li>
           <label><input type="radio" name="type" value="Ble3" />Dual x white noise Apenas para testes</label>
         </li>
-          <li>
-          <label><input type="radio" name="type" value="Ble4" /> WIFI:NOISYBOY SENHA: madapaka |GPIO 4|Single ou dual Nrf24l01 Lançamento oficial </label>
+        <li>
+          <label><input type="radio" name="type" value="Ble4" />WIFI:NOISYBOY SENHA: madapaka |GPIO 4| Single ou dual Nrf24l01 Lançamento oficial</label>
         </li>
-	        <li>
-          <label><input type="radio" name="type" value="Ble6" /> WIFI:NOISYBOY SENHA: madapaka PARA PCB DIY </label>
+        <li>
+          <label><input type="radio" name="type" value="Ble6" />WIFI:NOISYBOY SENHA: madapaka PARA PCB DIY</label>
         </li>
       </ul>
-      <p class="button-row" align="center">
+      <p class="button-row">
         <esp-web-install-button class="invisivel"></esp-web-install-button>
       </p>
-
       <div class="rodape">
-	  ✨ 
-		
-       Você pode doar via <a href="http://pixgg.com/nwask">PixGG</a> 🛠️
+        ✨ Você pode doar via <a href="http://pixgg.com/nwask">PixGG</a> 🛠️
+      </div>
     </div>
     <script>
       document.querySelectorAll('input[name="type"]').forEach(radio =>
@@ -117,8 +157,8 @@
           const button = document.querySelector('esp-web-install-button');
           button.manifest = `web/manifest_${radio.value}.json`;
           button.classList.remove('invisivel');
-        }
-      ));
+        })
+      );
     </script>
   </body>
 </html>
